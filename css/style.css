@@ -92,7 +92,6 @@ header article a{
     height: calc(100vh - 60px);
 }
 .image-container{
-    /* background-color: rgba(255,255,255,.2); */
     position: relative;
     top: -6%;
 }
@@ -237,7 +236,6 @@ header article a{
     transform: rotate(0deg) scale(1) translateY(10px);
     transition: .5s all ease;
     z-index: 400;
-    /* box-shadow: 0 4px 4px rgb(247 166 0 / 10%), 0 4px 80px rgb(247 166 0 / 24%); */
     box-shadow: 0 0px 57px rgb(247 166 0 / 30%), 0 0px 50px rgb(247 166 0 / 40%);
   }
 

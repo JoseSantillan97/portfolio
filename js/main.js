@@ -5,10 +5,6 @@ const toggleLight = () =>{
 	}
 }
 skills.addEventListener("click", toggleLight);
-toggleLight(); 
-
-const arraySkills = [];
-
 
 const addMovement = () => {
 	const list1 = document.getElementById("skillsList1");
@@ -23,4 +19,5 @@ const addMovement = () => {
 	}
 }
 
+toggleLight(); 
 setInterval(addMovement, 1500);
