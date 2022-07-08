@@ -62,6 +62,7 @@ header article a{
     top: 15%;
     left: 5vh;
     font-family: 'Roboto Condensed', sans-serif;
+    z-index: 2;
 }
 .tag1{
     position: relative;
@@ -71,14 +72,14 @@ header article a{
     animation: appearTags 3s ease-in-out;
 }
 .tag2{
-    top: 27vh;
+    top: 45vh;
     left: 51vw;
     border-radius: 5px 5px 5px 0;
     animation: appearTags 7s ease-in-out;
 }
 .tag3{
     top: 52vh;
-    left: 50vw;
+    left: -10vw;
     border-radius: 0 5px 5px 5px;
     animation: appearTags 10s ease-in-out;
 }
@@ -131,6 +132,7 @@ header article a{
     margin: auto 0;
     font-size: 1.35rem;
     font-family: 'Palanquin', sans-serif;
+    z-index: 20;
 }
 .activeSwinging{
     animation: swinging 1.5s ease-in-out infinite;
@@ -162,8 +164,8 @@ header article a{
     width: 500px;
 }
 .skills-quoteContainer{
-    position: relative;    
-    top: 30%;
+    position: relative;
+    align-self: end;
 }
 .skills-quoteContainer p:first-child{
     font-family: 'Quintessential', cursive;
@@ -189,9 +191,9 @@ header article a{
 .projects{
     display: grid;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #110f1c;
-    grid-template-rows: 250px 1fr;
+    grid-template-rows: 150px 1fr;
 }
 .projects-title{
     margin: 7rem auto 0 auto;
@@ -252,17 +254,19 @@ header article a{
     width: 400px;
 }
 .projects-container p{
-    color: #FFF;
+    color: #000;
     border-radius: 0 0 5px 5px;
     font-weight: bold;
     padding: 3px 0;
+    background-color: #CCC;
+    margin-top: -5px;
 }
 /* ABOUT */
 .about{
     display: grid;
     background-color: rgba(34, 40, 49, 1);
-    height: 100vh;
-    grid-template-rows: 170px 1fr;
+    min-height: 100vh;
+    grid-template-rows: 145px 1fr;
 }
 .about-title{
     margin: 5rem auto 0 auto;
@@ -285,14 +289,14 @@ header article a{
 .about-container{
     display: grid;
     grid-template-columns: 4fr 2fr;
-    margin-top: -10rem;
+    margin-top: 2rem;
 }
 .about-me{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     width: 95%;
-    height: 70%;
+    height: auto;
     margin: auto;
     grid-gap: 3rem;
 }
@@ -383,9 +387,10 @@ header article a{
     width: 300px;
     border-radius: 50%;
 }
-.contact-image p{
+.contact-email{
+    display: grid;
+    place-items: center;
     font-size: 3rem;
-    margin: 3rem;
     font-family: 'Comforter', cursive;
     letter-spacing: 2px;
 }
@@ -411,4 +416,130 @@ footer{
     margin-top: -55px;
     color: #FFF;
     font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1000px) and (max-width: 1450px){
+    .projects{
+        padding-bottom: 4rem;
+    }
+    .projects-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-me div{
+        font-size: 1rem;
+    }
+    .about-img img {
+        width: 85%;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 999px){
+    .tag2{
+        left: 14vw;
+    }
+    .tag3{
+        left: -2vw;
+    }
+    .skills-list1, .skills-list2{
+        font-size: 1rem;
+    }
+    .skills-light img {
+        width: 350px;
+    }
+    .skills-light p{
+        font-size: 1.1rem;
+    }
+    .skills-quoteContainer p:last-child{
+        font-size: 1.5rem;
+    }
+    .projects{
+        padding-bottom: 4rem;
+    }
+    .projects-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-container{
+        grid-template-columns: 1fr;
+    }
+    .about-me {
+        grid-template-columns: 1fr;
+        width: 60%;
+    }
+    .about-me div{
+        min-height: 0;
+    }
+    .about-img{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    .contact-email{
+        font-size: 2rem;
+    }
+    .contact-socialNetworks img{
+        width: 35px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 499px){
+    .tag2{
+        left: 14vw;
+    }
+    .tag3{
+        left: -2vw;
+    }
+    .skills-list1, .skills-list2{
+        font-size: 1rem;
+    }
+    .skills-light img {
+        width: 350px;
+    }
+    .skills-light p{
+        font-size: 1.1rem;
+    }
+    .skills-quoteContainer p:last-child{
+        font-size: 1.5rem;
+    }
+    .projects{
+        padding-bottom: 4rem;
+    }
+    .projects-title{
+        font-size: 1.4rem;
+    }
+    .projects-container{
+        grid-template-columns: repeat(1, 1fr);
+        transform: scale(.7);
+        width: 100%;
+        margin-top: -7rem;
+        margin-bottom: -16rem;
+    }
+    .about-container{
+        grid-template-columns: 1fr;
+    }
+    .about-title{
+        font-size: 2.4rem;
+    }
+    .about-me {
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+    .about-me div{
+        min-height: 0;
+        font-size: .9rem;
+        padding: 0.5rem;
+    }
+    .about-img{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    .about-img img {
+        width: 85%;
+    }
+    .contact-image{
+        width: 100%;
+    }
+    .contact-email{
+        font-size: 2rem;
+    }
+    .contact-socialNetworks img{
+        width: 25px;
+    }
 }
